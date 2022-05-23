@@ -11,16 +11,18 @@ class App extends Component {
 
   onChangeUrl (e) {
     const req = {url:e.target.value};
-    axios.post('http://localhost:8081/shortener',req)
+    let baseUrl = window.location.href
+    baseUrl = baseUrl.includes("localhost")?"http://localhost:8081":baseUrl+":8081"
+    console.log(baseUrl);
+    axios.post(baseUrl+'/shortener',req)
     .then(res=>{
-      console.log(res.data);
       document.getElementById('shortened_url').innerHTML = 
       `<h3>Shortened URL : <a href=${res.data} target=”_blank”>${res.data}</a></h3>`;
 
       const req = {
         url:res.data
       }
-      axios.post('http://localhost:8081/QR',req,{ responseType: 'arraybuffer' })
+      axios.post(baseUrl+'/QR',req,{ responseType: 'arraybuffer' })
       .then(res => {
         let blob = new Blob(
           [res.data], 
