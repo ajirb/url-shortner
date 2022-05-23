@@ -1,0 +1,57 @@
+./qrly.HELP/md
+./qrly/target/
+!./mvn/wrapper/maven-wrapper./jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+./qrly/apt_generated
+./qrly/classpath
+./qrly/factorypath
+./qrly/project
+./qrly/settings
+./qrly/springBeans
+./qrly/sts4-cache
+
+### IntelliJ IDEA ###
+./qrly/idea
+*./qrly/iws
+*./qrly/iml
+*./qrly/ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/./qrly/nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+./qrly/vscode/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/url-shortner-frontend/node_modules
+/url-shortner-frontend/.pnp
+/url-shortner-frontend/.pnp.js
+
+# testing
+/url-shortner-frontend/coverage
+
+# production
+/url-shortner-frontend/build
+
+# misc
+./url-shortner-frontend/DS_Store
+./url-shortner-frontend/env.local
+./url-shortner-frontend/env.development.local
+./url-shortner-frontend/env.test.local
+./url-shortner-frontend/env.production.local
+
+./url-shortner-frontend/npm-debug.log*
+./url-shortner-frontend/yarn-debug.log*
+./url-shortner-frontend/yarn-error.log*
