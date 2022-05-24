@@ -11,9 +11,9 @@ class App extends Component {
 
   onChangeUrl (e) {
     const req = {url:e.target.value};
-    let baseUrl = window.location.href
-    baseUrl = baseUrl.includes("localhost")?"http://localhost:8081":baseUrl+":8081"
-    console.log(baseUrl);
+    let baseUrl = "http://"+window.location.hostname
+    baseUrl = baseUrl+":8081";
+    
     axios.post(baseUrl+'/shortener',req)
     .then(res=>{
       document.getElementById('shortened_url').innerHTML = 
